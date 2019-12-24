@@ -1,3 +1,12 @@
+# Tasmota Decode
+
+A quick React app to make decoding [Tasmota templates] for use in ESP Home configurations easier.
+
+Entering a JSON Tasmota template will decode the `GPIO` section into pin and feature information in a table to reference when creating a YAML config for ESP Home.
+
+## Updating Templates
+The Tasmota templates are stored in a JSON file (`src/components.json`) and may need to be updated if the [Tasmota Component List] ever changes.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,3 +51,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+[Tasmota templates]: https://templates.blakadder.com/index.html
+[Tasmota Component List]: https://tasmota.github.io/docs/#/Components

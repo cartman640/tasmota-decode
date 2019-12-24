@@ -36,7 +36,7 @@ export default class App extends React.Component<{}, State> {
     return (
       <div className="container">
         <div className="jumbotron">
-          <h1 className="display-4">Decode Tasmota Config</h1>
+          <h1 className="display-4">Decode Tasmota Template</h1>
           <p className="lead">Decode Tasmota template JSON into GPIO pin mapping for ESP Home.</p>
           <hr className="my-4" />
           <form className="form" onSubmit={this.handleSubmit}>
@@ -44,7 +44,8 @@ export default class App extends React.Component<{}, State> {
               name="template" 
               label="Tasmota Template JSON" 
               value={this.state.template} 
-              setter={this.templateSettter} />
+              setter={this.templateSettter}
+              placeholder='{"NAME":"Arlec Single","GPIO":[0,0,0,0,57,0,0,0,21,0,90,0,0],"FLAG":0,"BASE":18}' />
 
             <div className="d-flex flex-row align-items-start">
               <button type="submit" id="decodeButton" className="btn btn-primary btn-lg p-2">Decode</button>
