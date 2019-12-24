@@ -1,4 +1,4 @@
-const GPIO = ["00", "01", "02", "03", "04", "05", "09", "10", "12", "13", "14", "15", "16"];
+const GPIO = [0, 1, 2, 3, 4, 5, 9, 10, 12, 13, 14, 15, 16];
 const components = require('./components.json') as Component[];
 
 export function convert(inputLine: string): PinOut[] {
