@@ -12,21 +12,22 @@ const ResultTable: React.FC<Props> = ({pinouts}) => {
                <th>Description</th>
             </tr>
          </thead>
-         <tbody>
-            {pinouts.map(pinout => <ResultTableRow key={pinout.pin} pin={pinout.pin} name={pinout.name} description={pinout.description} />)}
-         </tbody>
+         <ResultTableRows pinouts={pinouts} />
       </table>
    )
 }
 
-const ResultTableRow: React.FC<{pin: string; name: string, description: string}> = ({pin, name, description}) => {
-   return (
-      <tr>
-         <td><code>{pin}</code></td>
-         <td>{name}</td>
-         <td>{description}</td>
-      </tr>
-   );
+const ResultTableRows: React.FC<{pinouts: PinOut[]}> = ({pinouts}) => {
+   const rows = pinouts.map(({pin, name, description}, index) => {
+      return (
+         <tr key={index}>
+            <td><code>{pin}</code></td>
+            <td>{name}</td>
+            <td>{description}</td>
+         </tr>
+      );
+   });
+   return <tbody>{rows}</tbody>;
 }
 
 type Props = {

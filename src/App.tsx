@@ -12,13 +12,13 @@ export default class App extends React.Component<{}, State> {
       result: undefined,
       error: undefined
     };
-    this.templateSettter = this.templateSettter.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  templateSettter(e: ChangeEvent<HTMLInputElement>) {
-    this.setState({template: e.target.value});
-  }
+  handleChange = (field: string) => (event: ChangeEvent<HTMLInputElement>) => {
+    this.setState({ [field]: event.target.value } as Pick<State, any>);
+  };
 
   handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -44,7 +44,7 @@ export default class App extends React.Component<{}, State> {
               name="template" 
               label="Tasmota Template JSON" 
               value={this.state.template} 
-              setter={this.templateSettter}
+              setter={this.handleChange('template')}
               placeholder='{"NAME":"Arlec Single","GPIO":[0,0,0,0,57,0,0,0,21,0,90,0,0],"FLAG":0,"BASE":18}' />
 
             <div className="d-flex flex-row align-items-start">
@@ -53,7 +53,7 @@ export default class App extends React.Component<{}, State> {
             </div>
           </form>
         </div>
-        <div className="flex">
+        <div>
           <ResultTable pinouts={this.state.result} />
         </div>
       </div>
@@ -62,7 +62,7 @@ export default class App extends React.Component<{}, State> {
 }
 
 const Error: React.FC = (props) => {
-  if (!props.children) return <React.Fragment></React.Fragment>;
+  if (!props.children) return null;
   return (
     <div id="errorMessage" className="alert alert-danger flex-fill" role="alert">
       {props.children}
