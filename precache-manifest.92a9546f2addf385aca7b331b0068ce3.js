@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "55b6edb6035ada892adfdd0ec5caed1b",
+    "revision": "82fa8173de62b6e9c21029784e8152d5",
     "url": "/tasmota-decode/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tasmota-decode/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "adb1aefff999d912a940",
+    "revision": "c7586acad671ba0f1326",
     "url": "/tasmota-decode/static/css/main.545afeee.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tasmota-decode/static/js/2.e3e8f5d9.chunk.js.LICENSE"
   },
   {
-    "revision": "adb1aefff999d912a940",
-    "url": "/tasmota-decode/static/js/main.3fd365bb.chunk.js"
+    "revision": "c7586acad671ba0f1326",
+    "url": "/tasmota-decode/static/js/main.8223bb8a.chunk.js"
   },
   {
     "revision": "8d6bbce3c7b72a167c8a",

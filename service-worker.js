@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tasmota-decode/precache-manifest.98e541efcbab440d45946193e6314e58.js"
+  "/tasmota-decode/precache-manifest.92a9546f2addf385aca7b331b0068ce3.js"
 );
 
 self.addEventListener('message', (event) => {
